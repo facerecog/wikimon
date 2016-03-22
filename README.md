@@ -30,7 +30,7 @@ Install pip and other dependencies (recommended):
 `$ sudo pip install -r opt/requirements.pip`
 
 
-Get phone number and password for our chat application (recommended):
+Get phone number and password for our chat application (skip if you already have the phone id and password):
 
 
 `$ yowsup-cli registration --requestcode sms --phone ########### --cc #`
