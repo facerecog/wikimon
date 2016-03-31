@@ -11,4 +11,5 @@ def ping(message, match):
 
 def superbot(message, match):
     bot_response = getResponse(message.getBody())
-    return TextMessageProtocolEntity(bot_response, to=message.getFrom())
+    string_bot_response = str(bot_response)
+    return TextMessageProtocolEntity(string_bot_response, to=message.getFrom())
