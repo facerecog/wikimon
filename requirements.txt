@@ -4,3 +4,4 @@ yowsup2==2.4.48
 python-Levenshtein==0.12.0
 flask==0.10.1
 oauthlib==1.0.3
+python-axolotl==0.1.34
