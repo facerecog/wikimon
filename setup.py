@@ -6,6 +6,7 @@ import subprocess
 import sys
 import os
 import platform
+import getpass
 
 if platform.system() == "Linux":
     # Check user ID
@@ -23,8 +24,7 @@ if platform.system() == "Linux":
                 print "Please follow the setup instructions at https://github.com/tgalal/yowsup"
                 print "Please enter the phone number you used:",
                 phone = raw_input()
-                print "Please enter the password you received upon registration:",
-                password = raw_input()
+                password = getpass.getpass(prompt="Please enter the password you received upon registration:")
 
                 config_file = open("src/config.py", "r")
                 lines = config_file.readlines()
