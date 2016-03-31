@@ -27,9 +27,7 @@
     Now just get the login and pw, and replace bellow. :)
 
 """
-auth = ("", "")
-
-# If filter_groups is True, the bot only stays
+auth = ('', '')
 # at groups that there is at least one admin on it.
 # Otherwise will leave instantly if added.
 filter_groups = False
