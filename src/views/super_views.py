@@ -15,7 +15,7 @@ class SuperViews():
         ]
 
     def about(self, message=None, match=None, to=None):
-        self.url_print_sender.send_by_url(message.getFrom(), "https://github.com/joaoricardo000/whatsapp-bot-seed", ABOUT_TEXT)
+        self.url_print_sender.send_by_url(message.getFrom(), "https://github.com/facerecog/wikimon", ABOUT_TEXT)
 
     def roll(self, message=None, match=None, to=None):
         return TextMessageProtocolEntity("[%d]" % random.randint(1, 6), to=message.getFrom())
@@ -33,7 +33,7 @@ class SuperViews():
 
 
 HELP_TEXT = """ [HELP]
-- Commands
+> Commands
 /help - Show this message.
 /about - About
 /s(earch) - I'm lucky!
@@ -44,14 +44,17 @@ HELP_TEXT = """ [HELP]
 /echo - Echo.
 /roll - Roll a dice.
 
-Automatic:
+> Chat
+* - Type any message to begin chatting with it
+
+> Downloads:
     - Url (http://...) print screen.
     - Image (jpeg, gif, png) download.
     - Videos (mp4, webm) downloads.
     - Youtube videos.
 """
 
-ABOUT_TEXT = """ [Whatsapp Bot Seed]
-A small open source python framework to create a whatsapp bot, with regex-callback message routing.
-https://github.com/joaoricardo000/whatsapp-bot-seed
+ABOUT_TEXT = """ [Facerecog Wikimon]
+Wikimon is a Python script which creates an artificial intelligent digital pet that learns through mirroring.
+https://github.com/facerecog/wikimon
 """
