@@ -38,8 +38,6 @@ HELP_TEXT = """ [HELP]
 /about - About
 /s(earch) - I'm lucky!
 /i(mage) - I'm lucky with image!
-/t(ts) - Text to speech.
-/(even)(odd) - Amazing game.
 /ping - Pong.
 /echo - Echo.
 /roll - Roll a dice.
@@ -48,10 +46,7 @@ HELP_TEXT = """ [HELP]
 * - Type any message to begin chatting with it
 
 > Downloads:
-    - Url (http://...) print screen.
-    - Image (jpeg, gif, png) download.
-    - Videos (mp4, webm) downloads.
-    - Youtube videos.
+URL - (http://...) print screen.
 """
 
 ABOUT_TEXT = """ [Facerecog Wikimon]
