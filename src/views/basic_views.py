@@ -1,5 +1,6 @@
 from yowsup.layers.protocol_messages.protocolentities import TextMessageProtocolEntity
 from req import getResponse
+import re
 
 def echo(message, match):
     print message.getBody()
@@ -10,6 +11,8 @@ def ping(message, match):
     return TextMessageProtocolEntity("Pong!", to=message.getFrom())
 
 def superbot(message, match):
-    bot_response = getResponse(message.getBody())
+    clean_bot_response = re.sub(r'(.)\1{3,}', '', message.getBody())
+    bot_response = getResponse(clean_bot_response)
     string_bot_response = str(bot_response)
+    string_bot_response = re.sub(r'(.)\1{3,}', '', string_bot_response)
     return TextMessageProtocolEntity(string_bot_response, to=message.getFrom())
