@@ -104,15 +104,11 @@ Users can chat with an fully-conversant artificial intelligent virtual friend th
 
 <p>First, install yowsup by following these steps:</p>
 
-<p>Clone jlguardi’s yowsup fork and install it:</p>
-
-<pre><code>$ git clone https://github.com/jlguardi/yowsup.git &amp;&amp; cd yowsup
+<pre><code>$ git clone https://github.com/tgalal/yowsup.git &amp;&amp; cd yowsup
 $ sudo apt-get install python-setuptools python-dev
 $ sudo python setup.py install
 $ cd ..
 </code></pre>
-
-<p>At the time of writing (31 March 2016), the official yowsup source code does not work. There is, however, a fork by jlguardi which does work. The following steps were successfully tested but please note that the jlguardi fork may not necessarily work in the future.</p>
 
 <p>Register your phone number:</p>
 
@@ -121,7 +117,7 @@ $ sudo ./yowsup-cli registration --requestcode sms --phone &lt;phone number&gt; 
 $ sudo ./yowsup-cli registration --register &lt;code sent to you via SMS&gt; --phone &lt;phone number&gt; --cc &lt;country code&gt;
 </code></pre>
 
-<p>For the mobile country codes required by the two commands above, find them <a href="https://en.wikipedia.org/wiki/Mobile_country_code">here</a>.</p>
+<p>For the &lt;mnc&gt; and &lt;mcc&gt; required by the two commands above, find them <a href="https://en.wikipedia.org/wiki/Mobile_country_code">here</a>.</p>
 
 <p>After registration, configure and run the server:</p>
 
