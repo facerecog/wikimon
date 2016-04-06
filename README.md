@@ -22,7 +22,7 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 **Sample Conversation** 
 
 <div style="float:left; width:100%">
-    <img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Wikimon-Learning-Language-Crop.gif" align="left" width=398px height=323px  />
+    <img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Wikimon-Learning-Language-Crop.gif" align="left" width=420px height=323px  />
 
 
 &nbsp;
@@ -41,6 +41,29 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 &nbsp;  
  
 
+&nbsp;  
+&nbsp;
+<div style="float:left; width:100%">
+    <img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Wikimon-Japanese-Cropped.gif" align="left" width=420px height=323px  />
+
+
+&nbsp;
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+ 
+
+&nbsp;  
 &nbsp;
 
 **System Requirements**
@@ -52,9 +75,10 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 
 **Wikimon Diagram**  
 
-<img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/WikimonDiagram.png" align="left" height="400" width="700" />
+<img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/WikimonDiagram.png" align="left" height="400" width="640" />
 
 
+&nbsp;  
 &nbsp;  
 &nbsp;  
 &nbsp;
