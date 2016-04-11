@@ -15,6 +15,13 @@ from yowsup.stacks.yowstack import YowStackBuilder
 from layers.notifications.notification_layer import NotificationsLayer
 from router import RouteLayer
 
+import argparse
+
+parser = argparse.ArgumentParser(description="Run wikimon")
+parser.add_argument("-p", "--phone", metavar="phone number", required=True, type=str, help="Phone number used for registration")
+parser.add_argument("-pw", "--password", metavar="password", required=True, type=str, help="14-20 digit password")
+args = parser.parse_args()
+wikimonauth = (args.phone, args.password)
 
 class YowsupEchoStack(object):
     def __init__(self, credentials):
@@ -47,7 +54,7 @@ if __name__ == "__main__":
     import config
 
     logging.basicConfig(stream=sys.stdout, level=config.logging_level, format=config.log_format)
-    server = YowsupEchoStack(config.auth)
+    server = YowsupEchoStack(wikimonauth)
     while True:
         # In case of disconnect, keeps connecting...
         server.start()
