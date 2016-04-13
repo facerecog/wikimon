@@ -52,7 +52,7 @@ class YowsupEchoStack(object):
 
 if __name__ == "__main__":
     import sys
-    import config
+    from wikimon_bot import config
 
     logging.basicConfig(stream=sys.stdout, level=config.logging_level, format=config.log_format)
     server = YowsupEchoStack(wikimonauth)
