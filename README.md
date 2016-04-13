@@ -1,6 +1,6 @@
 
 
-<img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Wikimon-Logo.png" align="left" height="180" width="160" />
+<img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Wikimon-Logo.png" align="left" height="180" width="155" />
 
 
 
@@ -87,11 +87,12 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 
 
 -----------------------
+&nbsp;  
 
 **Animated Tutorial**
 
 <div style="float:left; width:100%">
-    <img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Facerecog-Tutorial-Wikimon.gif" align="left" width=640 height=360px  />
+    <img src="https://raw.githubusercontent.com/facerecog/wikimon/gh-pages/images/Facerecog-Tutorial-Wikimon.gif" align="left" width=620 height=360px  />
 
 
 &nbsp;
@@ -111,6 +112,9 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 &nbsp;  
 &nbsp;  
 &nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;    
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -119,6 +123,18 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 -----------------------
 
 **Getting started** 
+
+There are two installation methods: installing it from source, or downloading it with `pip`. For both steps, you need to register your phone number via `yowsup-cli`.
+
+```
+$ sudo yowsup-cli registration --requestcode sms --phone <phone number> --cc <country code> --mcc <mcc> --mnc <mnc>
+$ sudo yowsup-cli registration --register <code sent to you via SMS> --phone <phone number> --cc <country code>
+```
+For the mobile network/country code required by the two commands above, find them [here](https://en.wikipedia.org/wiki/Mobile_country_code).
+
+Take note of the the password that yowsup-cli provides. Now you are ready to install wikimon.
+
+*To install from source:*
 
 First, clone the wikimon repository:
 `$ git clone https://github.com/facerecog/wikimon.git && cd wikimon`
@@ -131,21 +147,21 @@ $ sudo apt-get install python-setuptools python-dev
 $ sudo python setup.py install
 $ cd ..
 ```
-Register your phone number:
 
+Configure and run the server. Make that your working directory is the wikimon directory.
 ```
-$ sudo yowsup-cli registration --requestcode sms --phone <phone number> --cc <country code> --mcc <mcc> --mnc <mnc>
-$ sudo yowsup-cli registration --register <code sent to you via SMS> --phone <phone number> --cc <country code>
-```
-For the mobile network/country code required by the two commands above, find them [here](https://en.wikipedia.org/wiki/Mobile_country_code).
-
-After registration, configure and run the server. Make that your working directory is the wikimon directory.
-```
-$ sudo python setup.py install
-$ sudo python src/server.py
+$ sudo python install.py install
 ```
 
-
+*To install using pip*
+```
+curl -fsSL https://raw.githubusercontent.com/facerecog/wikimon/pip/before_pip.sh | sh
+sudo pip install wikimon_bot
+```
+**Running wikimon**
+```
+sudo wikimon-cli -p <phone number> -pw  <password>
+```
 -----------------------
 
 **Uninstall** 
