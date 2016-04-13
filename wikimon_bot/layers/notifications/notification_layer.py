@@ -6,7 +6,7 @@
     Is this implementation we use the CreateGroupsNotificationProtocolEntity to check if the bot was
     added in a group, and leave if it is not allowed.
 """
-import config
+from ... import config
 from yowsup.layers.interface import YowInterfaceLayer, ProtocolEntityCallback
 from yowsup.layers.protocol_groups.protocolentities.iq_groups_leave import LeaveGroupsIqProtocolEntity
 from yowsup.layers.protocol_groups.protocolentities.iq_result_groups_list import ListGroupsResultIqProtocolEntity

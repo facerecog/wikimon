@@ -1,5 +1,6 @@
-import config, random
-from utils.session import SessionDB
+from .. import config
+import random
+from .. utils import session 
 from yowsup.layers.protocol_messages.protocolentities import TextMessageProtocolEntity
 
 """
@@ -11,7 +12,7 @@ from yowsup.layers.protocol_messages.protocolentities import TextMessageProtocol
 class QuizView:
     def __init__(self, interface_layer):
         self.interface_layer = interface_layer
-        self.session_db = SessionDB(config.session_db_path, "quiz")
+        self.session_db = session.SessionDB(config.session_db_path, "quiz")
 
         # One route to start a new quiz, one to answer.
         self.routes = [

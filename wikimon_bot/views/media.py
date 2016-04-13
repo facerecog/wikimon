@@ -4,9 +4,9 @@
     Handles the media url messages with utilities classes for it.
 """
 import hashlib
-import config
+from .. import config
 import subprocess
-from utils.media_sender import ImageSender, VideoSender, UrlPrintSender, EspeakTtsSender
+from ..utils import media_sender
 
 
 class MediaViews():
@@ -14,10 +14,10 @@ class MediaViews():
         """
             Creates the regex routes and callbacks to handle media messages
         """
-        self.image_sender = ImageSender(interface_layer)
-        self.video_sender = VideoSender(interface_layer)
-        self.url_print_sender = UrlPrintSender(interface_layer)
-        self.tts_sender = EspeakTtsSender(interface_layer)
+        self.image_sender = media_sender.ImageSender(interface_layer)
+        self.video_sender = media_sender.VideoSender(interface_layer)
+        self.url_print_sender = media_sender.UrlPrintSender(interface_layer)
+        self.tts_sender = media_sender.EspeakTtsSender(interface_layer)
         self.routes = [
             ("https?:\/\/(?:[\w\-]+\.)+[a-z]{2,6}(?:\/[^\/#?]+)+\.(?:jpe?g|gif|png)($|\?[^\s]+$)", self.send_image),
             ("https?:\/\/(?:[\w\-]+\.)+[a-z]{2,6}(?:\/[^\/#?]+)+\.(?:mp4|webm)($|\?[^\s]+$)", self.send_video),

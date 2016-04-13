@@ -24,7 +24,7 @@ import requests
 import shutil
 import hashlib
 import re
-import config
+from .. import config
 from pytube import YouTube
 
 

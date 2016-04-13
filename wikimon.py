@@ -13,8 +13,8 @@ from yowsup.layers.auth import AuthError
 from yowsup.layers.network import YowNetworkLayer
 from yowsup.stacks.yowstack import YowStackBuilder
 
-from layers.notifications.notification_layer import NotificationsLayer
-from router import RouteLayer
+from wikimon_bot.layers.notifications.notification_layer import NotificationsLayer
+from wikimon_bot.router import RouteLayer
 
 import argparse
 
