@@ -1,1 +1,1 @@
-wikimonbot
+wikimon_bot
