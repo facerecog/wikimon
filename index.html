@@ -145,6 +145,18 @@ You can chat with a fully-conversant artificial intelligent virtual pet that lea
 
 <p><strong>Getting started</strong> </p>
 
+<p>There are two installation methods: installing it from source, or downloading it with <code>pip</code>. For both steps, you need to register your phone number via <code>yowsup-cli</code>.</p>
+
+<pre><code>$ sudo yowsup-cli registration --requestcode sms --phone &lt;phone number&gt; --cc &lt;country code&gt; --mcc &lt;mcc&gt; --mnc &lt;mnc&gt;
+$ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --phone &lt;phone number&gt; --cc &lt;country code&gt;
+</code></pre>
+
+<p>For the mobile network/country code required by the two commands above, find them <a href="https://en.wikipedia.org/wiki/Mobile_country_code">here</a>.</p>
+
+<p>Take note of the the password that yowsup-cli provides. Now you are ready to install wikimon.</p>
+
+<p><em>To install from source:</em></p>
+
 <p>First, clone the wikimon repository:
 <code>$ git clone https://github.com/facerecog/wikimon.git &amp;&amp; cd wikimon</code></p>
 
@@ -156,18 +168,20 @@ $ sudo python setup.py install
 $ cd ..
 </code></pre>
 
-<p>Register your phone number:</p>
+<p>Configure and run the server. Make that your working directory is the wikimon directory.</p>
 
-<pre><code>$ sudo yowsup-cli registration --requestcode sms --phone &lt;phone number&gt; --cc &lt;country code&gt; --mcc &lt;mcc&gt; --mnc &lt;mnc&gt;
-$ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --phone &lt;phone number&gt; --cc &lt;country code&gt;
+<pre><code>$ sudo python install.py install
 </code></pre>
 
-<p>For the mobile network/country code required by the two commands above, find them <a href="https://en.wikipedia.org/wiki/Mobile_country_code">here</a>.</p>
+<p><em>To install using pip</em></p>
 
-<p>After registration, configure and run the server. Make that your working directory is the wikimon directory.</p>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/facerecog/wikimon/pip/before_pip.sh | sh
+sudo pip install wikimon_bot
+</code></pre>
 
-<pre><code>$ sudo python setup.py install
-$ sudo python src/server.py
+<p><strong>Running wikimon</strong></p>
+
+<pre><code>sudo wikimon-cli -p &lt;phone number&gt; -pw  &lt;password&gt;
 </code></pre>
 
 <hr>
