@@ -125,20 +125,6 @@ Licensed under the MIT License - [https://opensource.org/licenses/MIT](https://o
 **Getting started** 
 
 There are two installation methods: installing it from source, or downloading it with `pip`. For both steps, you need to register your phone number via `yowsup-cli`.
-
-```
-$ sudo yowsup-cli registration --requestcode sms --phone <phone number> --cc <country code> --mcc <mcc> --mnc <mnc>
-$ sudo yowsup-cli registration --register <code sent to you via SMS> --phone <phone number> --cc <country code>
-```
-For the mobile network/country code required by the two commands above, find them [here](https://en.wikipedia.org/wiki/Mobile_country_code).
-
-Take note of the the password that yowsup-cli provides. Now you are ready to install wikimon.
-
-*To install from source:*
-
-First, clone the wikimon repository:
-`$ git clone https://github.com/facerecog/wikimon.git && cd wikimon`
-
 If you haven't installed yowsup, do so by following these steps:
 
 ```
@@ -148,17 +134,38 @@ $ sudo python setup.py install
 $ cd ..
 ```
 
+Now, register your phone number:
+```
+$ sudo yowsup-cli registration --requestcode sms --phone <phone number> --cc <country code> --mcc <mcc> --mnc <mnc>
+$ sudo yowsup-cli registration --register <code sent to you via SMS> --phone <phone number> --cc <country code>
+```
+For the mobile network/country code required by the two commands above, find them [here](https://en.wikipedia.org/wiki/Mobile_country_code).
+
+Take note of the the password that yowsup-cli provides. Now you are ready to install wikimon.
+
+**To install from source:**
+
+First, clone the wikimon repository:
+```
+$ git clone https://github.com/facerecog/wikimon.git && cd wikimon
+```
+
 Configure and run the server. Make that your working directory is the wikimon directory.
 ```
 $ sudo python install.py install
 ```
+Run wikimon:
+```
+sudo ./wikimon-cli -p <phone number> -pw  <password>
+```
 
-*To install using pip*
+**To install using pip**
 ```
 curl -fsSL https://raw.githubusercontent.com/facerecog/wikimon/pip/before_pip.sh | sh
 sudo pip install wikimon_bot
 ```
-**Running wikimon**
+
+Run wikimon:
 ```
 sudo wikimon-cli -p <phone number> -pw  <password>
 ```
@@ -170,7 +177,7 @@ sudo wikimon-cli -p <phone number> -pw  <password>
 The following command will remove all the packages that Wikimon’s `setup.py` automatically installs. Please read it carefully and run it at your own risk as other packages already on your system may require them.
 
 ```
-$ sudo apt-get remove python-pip python-dev python-setuptools libjpeg-dev zlib1g-dev espeak
+$ sudo apt-get remove python-pip python-dev npm nodejs-legacy python-setuptools libjpeg-dev zlib1g-dev espeak
 ```
 
 -------------------------
