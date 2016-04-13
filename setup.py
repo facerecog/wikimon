@@ -16,7 +16,7 @@ setup(
         keywords = ['bot', 'chat'],
         classifiers = [],
         install_requires=['pytube', 'requests', 'python-Levenshtein', 'flask', 'oauthlib', 'python-axolotl', 'yowsup2'],
-        scripts=['wikimon'],
+        scripts=['wikimon-cli'],
         )
 
 
