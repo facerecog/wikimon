@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 """
     This is the server starter.
 
@@ -12,8 +13,8 @@ from yowsup.layers.auth import AuthError
 from yowsup.layers.network import YowNetworkLayer
 from yowsup.stacks.yowstack import YowStackBuilder
 
-from layers.notifications.notification_layer import NotificationsLayer
-from router import RouteLayer
+from wikimon_bot.layers.notifications.notification_layer import NotificationsLayer
+from wikimon_bot.router import RouteLayer
 
 import argparse
 
@@ -51,7 +52,7 @@ class YowsupEchoStack(object):
 
 if __name__ == "__main__":
     import sys
-    import config
+    from wikimon_bot import config
 
     logging.basicConfig(stream=sys.stdout, level=config.logging_level, format=config.log_format)
     server = YowsupEchoStack(wikimonauth)

@@ -3,13 +3,13 @@
     /i(mage) <term>
 
 """
-from utils.media_sender import ImageSender
+from ..utils import media_sender
 import requests, urllib
-import config
+from .. import config
 
 class BingViews():
     def __init__(self, interface_layer):
-        self.image_sender = ImageSender(interface_layer)
+        self.image_sender = media_sender.ImageSender(interface_layer)
         self.routes = [
             ("/i(mage)?\s(?P<term>[^$]+)$", self.bing_image_search)
         ]

@@ -2,7 +2,7 @@ import requests
 import json
 import sys, os
 sys.path.append('..')
-import config
+from .. import config
 
 unique_database = str(config.auth[0])
 def getResponse(input_message):

@@ -5,16 +5,16 @@
     youtube urls
 
 """
-from utils.media_sender import ImageSender, VideoSender, YoutubeSender, UrlPrintSender
+from ..utils import media_sender
 import requests, urllib
 
 
 class GoogleViews():
     def __init__(self, interface_layer):
-        self.image_sender = ImageSender(interface_layer)
-        self.video_sender = VideoSender(interface_layer)
-        self.yt_sender = YoutubeSender(interface_layer)
-        self.url_print_sender = UrlPrintSender(interface_layer)
+        self.image_sender = media_sender.ImageSender(interface_layer)
+        self.video_sender = media_sender.VideoSender(interface_layer)
+        self.yt_sender = media_sender.YoutubeSender(interface_layer)
+        self.url_print_sender = media_sender.UrlPrintSender(interface_layer)
         self.routes = [
             (".*https?:\/\/(?:www\.|m\.)?youtu(?:be.com\/watch\?v=|\.be/)(?P<video_id>[\w-]+)(&\S*)?$",
              self.send_yt_video),
