@@ -164,7 +164,7 @@ $ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --pho
 
 <p>Take note of the the password that yowsup-cli provides. Now you are ready to install wikimon.</p>
 
-<p><em>To install from source:</em></p>
+<p><strong>To install from source:</strong></p>
 
 <p>First, clone the wikimon repository:</p>
 
@@ -181,7 +181,7 @@ $ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --pho
 <pre><code>sudo ./wikimon-cli -p &lt;phone number&gt; -pw  &lt;password&gt;
 </code></pre>
 
-<p><em>To install using pip</em></p>
+<p><strong>To install using pip</strong></p>
 
 <pre><code>curl -fsSL https://raw.githubusercontent.com/facerecog/wikimon/pip/before_pip.sh | sh
 sudo pip install wikimon_bot
@@ -198,7 +198,7 @@ sudo pip install wikimon_bot
 
 <p>The following command will remove all the packages that Wikimon’s <code>setup.py</code> automatically installs. Please read it carefully and run it at your own risk as other packages already on your system may require them.</p>
 
-<pre><code>$ sudo apt-get remove python-pip python-dev python-setuptools libjpeg-dev zlib1g-dev espeak
+<pre><code>$ sudo apt-get remove python-pip python-dev npm nodejs-legacy python-setuptools libjpeg-dev zlib1g-dev espeak
 </code></pre>
 
 <hr>
