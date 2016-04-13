@@ -7,7 +7,7 @@ import subprocess
 setup(
         name = 'wikimon_bot',
         packages = find_packages(), # this must be the same as the name above
-        version = '0.0.11',
+        version = '0.0.13',
         description = 'Wikimon is a Python script which creates an artificial intelligent digital pet that learns through mirroring.',
         author = 'FaceRecog Pte Ltd',
         author_email = 'muhd.amrullah@facerecog.asia',
@@ -16,7 +16,7 @@ setup(
         keywords = ['bot', 'chat'],
         classifiers = [],
         install_requires=['pytube', 'requests', 'python-Levenshtein', 'flask', 'oauthlib', 'python-axolotl', 'yowsup2'],
-        scripts=['wikimon.py'],
+        scripts=['wikimon'],
         )
 
 
