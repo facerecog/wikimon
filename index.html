@@ -145,7 +145,16 @@ You can chat with a fully-conversant artificial intelligent virtual pet that lea
 
 <p><strong>Getting started</strong> </p>
 
-<p>There are two installation methods: installing it from source, or downloading it with <code>pip</code>. For both steps, you need to register your phone number via <code>yowsup-cli</code>.</p>
+<p>There are two installation methods: installing it from source, or downloading it with <code>pip</code>. For both steps, you need to register your phone number via <code>yowsup-cli</code>.
+If you haven't installed yowsup, do so by following these steps:</p>
+
+<pre><code>$ git clone https://github.com/tgalal/yowsup.git &amp;&amp; cd yowsup
+$ sudo apt-get install python-setuptools python-dev
+$ sudo python setup.py install
+$ cd ..
+</code></pre>
+
+<p>Now, register your phone number:</p>
 
 <pre><code>$ sudo yowsup-cli registration --requestcode sms --phone &lt;phone number&gt; --cc &lt;country code&gt; --mcc &lt;mcc&gt; --mnc &lt;mnc&gt;
 $ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --phone &lt;phone number&gt; --cc &lt;country code&gt;
@@ -157,15 +166,9 @@ $ sudo yowsup-cli registration --register &lt;code sent to you via SMS&gt; --pho
 
 <p><em>To install from source:</em></p>
 
-<p>First, clone the wikimon repository:
-<code>$ git clone https://github.com/facerecog/wikimon.git &amp;&amp; cd wikimon</code></p>
+<p>First, clone the wikimon repository:</p>
 
-<p>If you haven't installed yowsup, do so by following these steps:</p>
-
-<pre><code>$ git clone https://github.com/tgalal/yowsup.git &amp;&amp; cd yowsup
-$ sudo apt-get install python-setuptools python-dev
-$ sudo python setup.py install
-$ cd ..
+<pre><code>$ git clone https://github.com/facerecog/wikimon.git &amp;&amp; cd wikimon
 </code></pre>
 
 <p>Configure and run the server. Make that your working directory is the wikimon directory.</p>
