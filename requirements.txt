@@ -2,6 +2,6 @@ pytube
 requests==2.9.1
 yowsup2==2.4.102
 python-Levenshtein==0.12.0
-flask==0.10.1
+flask==1.0
 oauthlib==1.0.3
 python-axolotl==0.1.34
